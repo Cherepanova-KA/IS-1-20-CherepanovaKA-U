@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Windows.Forms;
 
 namespace IS_1_20_CherepanovaKA_U
 {
@@ -74,21 +75,19 @@ namespace IS_1_20_CherepanovaKA_U
             this.Controls.Add(this.button1);
             this.Name = "Task1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+
+        public Task1(Button button3)
+        {
+            this.button3 = button3;
+        }
     }
 }
 
