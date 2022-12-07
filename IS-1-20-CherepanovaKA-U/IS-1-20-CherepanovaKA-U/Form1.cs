@@ -12,6 +12,8 @@ namespace IS_1_20_CherepanovaKA_U
 {
     public partial class Task1 : Form
     {
+        public object ListBox { get; private set; }
+
         public abstract class Complektation<T>
         {
             public int Price;
@@ -74,9 +76,29 @@ namespace IS_1_20_CherepanovaKA_U
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Task1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           TextBox();
+            _ = $"Цена {textBox1.Text}";
+            _ = $"Год {textBox2.Text}";
+            _ = $"Артикул {textBox3.Text}";
+            _ = $"Кол-во оборотов {textBox4.Text}";
+            _ = $"Интерфейс {textBox5.Text}";
+            _ = $"Объем {textBox6.Text}";
+            Harddrives<int> i1 = new Harddrives<int>(Convert.ToInt32(textBox4.Text), textBox5.Text, Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+            i1.Display();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        }
     }
 }
+   
